@@ -1,0 +1,13 @@
+﻿<li class="nav-item">
+    @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+    {
+    <div class="input-group">
+        <input class="form-control" id="search" name="search" type="text" placeholder="Ara...">
+        <span class="input-group-btn">
+            <button class="btn btn-primary" value="search" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </span>
+    </div>
+    }      
+</li>

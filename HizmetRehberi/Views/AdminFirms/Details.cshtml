@@ -1,0 +1,43 @@
+﻿@model HizmetRehberi.Models.Firmalar
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Detay</h2>
+
+<div>
+    <h4>Firmalar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaHakkinda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaHakkinda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaResim)
+        </dt>
+        
+        <dd>
+            <img src="@Model.FirmaResim" width="150" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.FirmaID }) |
+    @Html.ActionLink("Geri Dön", "Index")
+</p>

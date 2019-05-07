@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>@(Html.Raw(ViewBag.Title))</title>
+    <!-- Bootstrap core CSS -->
+    <link href="~/Content/User/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Custom styles for this template -->
+    <link href="~/Content/User/css/business-casual.min.css" rel="stylesheet">
+    <link href="~/Content/User/css/business-casual.css" rel="stylesheet">
+    <!-- Gallery css -->
+    
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-left mt-2 mb-2 d-none d-lg-block">
+            <span class="text-primary mb-1">Bursa Hizmet Rehberi</span>
+        </h1>
+    </div>
+
+    <!-- Navigation -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href=@Url.Action("","")>
+                            Anasayfa
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href=@Url.Action("Firms","Home")>Firmalar</a>
+                    </li>
+
+                    <li class="nav-item px-lg-4">
+                        <a class="nav-link text-uppercase text-expanded" href=@Url.Action("About","Home")>Hakkımızda</a>
+                    </li>
+                   
+                    @Html.Partial("SearchPartial")
+
+                    <li class="nav-item">
+                        <a class="nav-link" target="_blank" href="/AdminPage/Login">
+                            <i class="fa fa-fw fa-sign-in"></i>Giriş Yap
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    @RenderBody()
+
+    <footer class="footer text-faded text-center py-5">
+        <div class="container">
+            <div class="row row-30">
+                <div class="col-md-6">
+                    <div class="pr-xl-4">
+                        <h5>Hakkımızda</h5>
+                        <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion,<br /> business consulting, and marketing.</p>
+                        <!-- Rights-->
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h5>İletişim</h5>
+                    <dl class="contact-list">
+                        <dt>Adres:</dt>
+                        <dd>Ornek Mah. İstanbul, Türkiye</dd>
+                    </dl>
+                    <p class="contact-list">
+                        email:
+                        <a href="mailto:#">dkstudioin@gmail.com</a>
+                        <br />
+
+                        tel:
+                        <a href="tel:#">+91 7568543012</a> <span>yada</span> <a href="tel:#">+91 9571195353</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="container ">
+            <p class="rights mt5 float-left"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Created by <a href="https://www.linkedin.com/in/irfanaltintas/" target="_blank">İrfan Altıntaş</a></span><span>. </span><span>All Rights Reserved.</span></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Content/User/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Content/User/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- gallery js -->
+    
+
+
+
+</body>
+
+</html>

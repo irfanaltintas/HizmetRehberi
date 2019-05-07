@@ -1,0 +1,29 @@
+﻿@model IEnumerable<HizmetRehberi.Models.Firmalar>
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+<section class="page-section">
+    <div class="container">
+        <div class="product-item">
+            <div class="product-item-title d-flex">
+                <div class="bg-faded p-5 d-flex ml-auto rounded">
+                    <h2 class="section-heading mb-0">
+                        <span class="section-heading-upper">Firmalar</span>
+                        <span class="section-heading-lower">@item.FirmaAdi</span>
+                    </h2>
+                </div>
+            </div>
+            <a href="/Home/OneFirm/@item.FirmaID"><img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="@item.FirmaResim" alt=""></a>
+            <div class="product-item-description d-flex mr-auto">
+                <div class="bg-faded p-5 rounded">
+                    <p class="mb-0">@item.FirmaHakkinda ...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+}

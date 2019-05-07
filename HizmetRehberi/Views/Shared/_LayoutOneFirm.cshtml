@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>@(Html.Raw(ViewBag.Title))</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/Gallery/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/animate.css">
+
+    <link rel="stylesheet" href="/Content/Gallery/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/magnific-popup.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/aos.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/ionicons.min.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="/Content/Gallery/css/flaticon.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/icomoon.css">
+    <link rel="stylesheet" href="/Content/Gallery/css/style.css">
+</head>
+<body>
+    <div id="colorlib-page">
+        <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+        <aside id="colorlib-aside" role="complementary" class="js-fullheight text-center">
+            <h1 id="colorlib-logo"><a href=@Url.Action("","")><span class="flaticon-camera"></span>Bursa Hizmet Rehberi</a></h1>
+            <nav id="colorlib-main-menu" role="navigation">
+                <ul>
+                    <li><a href=@Url.Action("","")>Anasayfa</a></li>
+                    <li class="colorlib-active"><a href="#">Galeri</a></li>
+                    <li><a href=@Url.Action("About","Home")>Hakkında</a></li>       
+                    <li><a href=@Url.Action("Firms","Home")>Firmalar</a></li>
+                </ul>
+            </nav>
+            <div class="colorlib-footer">
+                <h3>Bize Ulaşın!</h3>
+                <div class="d-flex justify-content-center">
+                    <ul class="d-flex align-items-center">
+                        <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-twitter"></i></a></li>
+                        <li class="d-flex align-items-center jusitfy-content-center"><a href="#"><i class="icon-instagram"></i></a></li>                        
+                    </ul>
+                </div>
+            </div>
+        </aside> <!-- END COLORLIB-ASIDE -->
+        <div id="colorlib-main">
+
+            @RenderBody()
+            <footer class="ftco-footer ftco-bg-dark ftco-section">
+                <div class="container">
+                    <div class="row row-30">
+                        <div class="col-md-6">
+                            <div class="pr-xl-4">
+                                <h5>Hakkımızda</h5>
+                                <p>We are an award-winning creative agency, dedicated to the best result in web design, promotion,<br /> business consulting, and marketing.</p>
+                                <!-- Rights-->
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>İletişim</h5>
+                            <dl class="contact-list">
+                                <dt>Adres:</dt>
+                                <dd>Ornek Mah. İstanbul, Türkiye</dd>
+                            </dl>
+                            <p class="contact-list">
+                                email:
+                                <a href="mailto:#">dkstudioin@gmail.com</a>
+                                <br />
+
+                                tel:
+                                <a href="tel:#">+91 7568543012</a> <span>yada</span> <a href="tel:#">+91 9571195353</a>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="container ">
+                    <p class="rights mt5 float-left"><span>©  </span><span class="copyright-year">2018</span><span> </span><span>Waves</span><span>. </span><span>All Rights Reserved.</span></p>
+                </div>
+            </footer>
+        </div><!-- END COLORLIB-MAIN -->
+    </div><!-- END COLORLIB-PAGE -->
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+    <script src="/Content/Gallery/js/jquery.min.js"></script>
+    <script src="/Content/Gallery/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="/Content/Gallery/js/popper.min.js"></script>
+    <script src="/Content/Gallery/js/bootstrap.min.js"></script>
+    <script src="/Content/Gallery/js/jquery.easing.1.3.js"></script>
+    <script src="/Content/Gallery/js/jquery.waypoints.min.js"></script>
+    <script src="/Content/Gallery/js/jquery.stellar.min.js"></script>
+    <script src="/Content/Gallery/js/owl.carousel.min.js"></script>
+    <script src="/Content/Gallery/js/jquery.magnific-popup.min.js"></script>
+    <script src="/Content/Gallery/js/aos.js"></script>
+    <script src="/Content/Gallery/js/jquery.animateNumber.min.js"></script>
+    <script src="/Content/Gallery/js/bootstrap-datepicker.js"></script>
+    <script src="/Content/Gallery/js/jquery.timepicker.min.js"></script>
+    <script src="/Content/Gallery/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="/Content/Gallery/js/google-map.js"></script>
+    <script src="/Content/Gallery/js/main.js"></script>
+
+</body>
+</html>

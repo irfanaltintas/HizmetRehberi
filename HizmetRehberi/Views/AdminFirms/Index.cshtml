@@ -1,0 +1,55 @@
+﻿@model IEnumerable<HizmetRehberi.Models.Firmalar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Firmalar</h2><hr />
+
+<p>
+    @Html.ActionLink("Yeni Firma Ekle", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Firma Adı")
+        </th>
+        <th>
+            @Html.DisplayName("Firma Hakkında")
+        </th>
+        <th>
+            @Html.DisplayName("Firma Resim")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirmaAdi)
+        </td>
+        <td>
+            @if (item.FirmaHakkinda.Length > 30)
+            {
+            <p> @item.FirmaHakkinda.Substring(0, 30)...</p>
+            }
+            else
+            {
+                @item.FirmaHakkinda
+            }
+
+        </td>
+        <td>
+            <img src="@item.FirmaResim" width="75"/>
+        </td>
+        <td>
+            @Html.ActionLink("Düzenle", "Edit", new { id=item.FirmaID }) |
+            @Html.ActionLink("Detay", "Details", new { id=item.FirmaID }) |
+            @Html.ActionLink("Sil", "Delete", new { id=item.FirmaID })
+        </td>
+    </tr>
+}
+
+</table>

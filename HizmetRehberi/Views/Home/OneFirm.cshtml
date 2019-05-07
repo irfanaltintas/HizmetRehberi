@@ -1,0 +1,37 @@
+﻿
+@{
+    
+    Layout = "~/Views/Shared/_LayoutOneFirm.cshtml";
+}
+
+@model HizmetRehberi.Models.Firmalar
+
+<section class="ftco-section bg-light ftco-bread">
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center">
+            <div class="col-md-9 ftco-animate">
+                <h1 class="mb-3 bread">@Model.FirmaAdi</h1>
+                <p>@Model.FirmaHakkinda...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section-2">
+    <div class="photograhy">
+        <div class="row no-gutters">
+            @foreach (var item in Model.Resimlers)
+            {
+                <div class="col-md-4 ftco-animate">
+                    <a href="@item.ResimYolu" class="photography-entry img image-popup d-flex justify-content-center align-items-center" style="background-image: url(@item.ResimYolu);">
+                        <div class="overlay"></div>
+                        <div class="text text-center">
+                            <h3>@item.Firmalar.FirmaAdi</h3>
+                            <span class="tag">@item.ResimID</span>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</section>

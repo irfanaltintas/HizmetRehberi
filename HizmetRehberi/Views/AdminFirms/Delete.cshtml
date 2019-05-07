@@ -1,0 +1,49 @@
+﻿@model HizmetRehberi.Models.Firmalar
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+
+<h3>Silmek istediğinize emin misiniz?</h3>
+<div>
+    <h4>Firmalar</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaAdi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaAdi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirmaHakkinda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirmaHakkinda)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Resim")
+        </dt>
+
+        <dd>
+            <img src="@Model.FirmaResim" width="150" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="SİL" class="btn btn-primary" /> |
+            @Html.ActionLink("Geri Dön", "Index")
+        </div>
+    }
+</div>

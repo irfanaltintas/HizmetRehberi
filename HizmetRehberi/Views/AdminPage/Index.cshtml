@@ -1,0 +1,58 @@
+﻿@model IEnumerable<HizmetRehberi.Models.Firmalar>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fa fa-table"></i> Kayıtlı Firmalar
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Firma Adı</th>
+                        <th>Firma Hakkında</th>
+                        <th>Firma Resim</th>
+                        <th>Firma ID</th>
+
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Firma Adı</th>
+                        <th>Firma Hakkında</th>
+                        <th>Firma Resim</th>
+                        <th>Firma ID</th>
+
+                    </tr>
+                </tfoot>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.FirmaAdi</td>
+                            <td>
+                                @if (item.FirmaHakkinda.Length > 20)
+                                {
+                                    <p> @item.FirmaHakkinda.Substring(0, 20)...</p>
+                                }
+                                else
+                                {
+                                    @item.FirmaHakkinda
+                                }
+                            </td>
+                            <td><img src="@item.FirmaResim" width="75" /></td>
+                            <td>@item.FirmaID</td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+﻿@model IEnumerable<HizmetRehberi.Models.Firmalar>
+
+@{  
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <p>
+        <h2>Arama Sonucu</h2>
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Firma Adı")
+            </th>
+            <th>
+                @Html.DisplayName("Firma Hakkında")
+            </th>
+            <th>
+                @Html.DisplayName("Resim")
+            </th>
+                     
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a class="text-primary text-uppercase" href="/Home/OneFirm/@item.FirmaID">@item.FirmaAdi</a>
+                </td>
+                <td>
+                    @if (item.FirmaHakkinda.Length > 20)
+                    {
+                        <p> @item.FirmaHakkinda.Substring(0, 20)...</p>
+                    }
+                    else
+                    {
+                        @item.FirmaHakkinda
+                    }
+                </td>
+                <td>
+                    <a href="/Home/OneFirm/@item.FirmaID"><img class="rounded" src="@item.FirmaResim" width="150" alt="@item.FirmaAdi" /></a>
+                </td>
+
+            </tr>
+        }
+
+    </table>
+</div>
